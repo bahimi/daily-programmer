@@ -3,13 +3,30 @@
 
 
 #Get input from user
-input = gets.chomp
+string = arg[0]
+cipher = arg[1]
 
 #Separate into individual characters in an array
-input_bychar = input.split(//)
+by_char = string.split(//)
 
 #Convert each character in to ASCII value (65..90 for upcase, 97..122 for downcase)
 #To perform, write block to iterate through array for each non-space and use .ord
+by_char.map! do |c|
+  c.ord
+end
+
+by_char.map! do |d|
+  if d == 32
+
+  else
+    d += cipher.to_i
+  end
+end
+
+by_char.map! do |e|
+  e.chr
+end
+
 
 #Evaluate any in upcase range
 
