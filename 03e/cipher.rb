@@ -21,6 +21,7 @@ by_char.map! do |d|
   end
 
 #If value is over 122, subtract 122 and add 96 to put it back in range, then convert back to characters using .chr
+#If value is over 90, subtract 90 and add 65
 # Switch case would probably work best here.  Evaluate ranges and select case to run for each.
   if d > 122
     d = (d - 122) + 96
@@ -38,3 +39,7 @@ p by_char
 by_char = by_char.join('')
 
 p by_char
+
+###########
+# Decrypt #
+###########
